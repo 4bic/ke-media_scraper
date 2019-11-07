@@ -76,3 +76,15 @@ def collect_and_save(articles):
 
           f.write(data)
           f.close()
+
+
+
+BD = ["2017-business-daily-kenya","2018-business-daily-kenya","2019-business-daily-kenya"]
+Standard_digital=["2015-standard-digital","2016-standard-digital","2017-standard-digital",
+                  "2018-standard-digital","2019-standard-digital"]
+Star=["2013-the-star","2014-the-star","2015-the-star","2016-the-star",
+        "2017-the-star","2018-the-star","2019-the-star"]
+EA=["1970-the-east-african","2015-the-east-african","2016-the-east-african",
+      "2017-the-east-african","2018-the-east-african","2019-the-east-african"]
+
+media = [BD,Standard_digital, Star, EA]
