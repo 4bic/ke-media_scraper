@@ -51,3 +51,28 @@ def get_articles_path():
             articles.append(article_path)
 
     return articles
+
+
+def collect_and_save(articles):
+    article_url = []
+    for article in articles:
+        url = raw_url + proj + tree + str(article)
+        print(article_url)
+    #     save to file
+        year = url.split('/')[4]
+        month = url.split('/')[6]
+
+        print(year + ":>><<:"+month)
+
+        Dir = str(year)+"/"+str(month)+"/"
+
+        file_path = './media/' + Dir  # Change path to suit local dir
+        file_name = data[:50].title()
+
+        if not os.path.exists(file_path):
+          os.mkdir(file_path)
+
+        with open(file_path+file_name+'.txt', 'w+') as f:
+
+          f.write(data)
+          f.close()
